@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insertar Alumno</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+            color: #212529;
+        }
+        .form-container {
+            display: grid;
+            grid-template-columns: auto auto;
+            gap: 20px;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+        .form-container label {
+            justify-self: end;
+        }
+        .form-container input[type="submit"] {
+            grid-column: span 2;
+            justify-self: center;
+        }
+        .form-container input[type="file"] {
+            grid-column: span 2;
+        }
+        a {
+            color: #007bff;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+  <h1 style="text-align: center;">Inserción de nuevos Alumnos</h1>
+  <form method="post" action="insertar_alumno.php" enctype="multipart/form-data" class="form-container">
+    <label for="nombre">Nombre:</label>
+    <input type="text" name="nombre">
+    <label for="direccion">Direccion:</label>
+    <input type="text" name="direccion">
+    <label for="email">Email:</label>
+    <input type="email" name="email">
+    <label for="telefono">Telefono:</label>
+    <input type="tel" name="telefono">
+    <label for="grado">Grado:</label>
+    <select name="grado">
+      <option value="primaria">Primaria</option>
+      <option value="secundaria">Secundaria</option>
+      <option value="preparatoria">Preparatoria</option>
+    </select>
+    <label>Sexo:</label>
+    <div>
+      <input type="radio" name="sexo" value="masculino"> Masculino
+      <input type="radio" name="sexo" value="femenino"> Femenino
+      <input type="radio" name="sexo" value="otro"> Otro
+    </div>
+    <label>Actividades extras:</label>
+    <div>
+      <input type="checkbox" name="actividades[]" value="deportes"> Deportes
+      <input type="checkbox" name="actividades[]" value="arte"> Arte
+      <input type="checkbox" name="actividades[]" value="musica"> Música
+    </div>
+    <label for="foto">Foto:</label>
+    <input type="file" name="foto" accept="image/*">
+    <input type="submit" value="Guardar">
+  </form>
+  <p style="text-align: center;"><a href="index.html">Volver al menu principal</a></p>
+</body>
+</html>
+</html>
+
